@@ -17,10 +17,10 @@ function applyCustomSort() {
   ) {
     for (let i = 0; i < this.length - 1; i++) {
       for (let j = i + 1; j < this.length; j++) {
-        const el1 = String(this[i]);
-        const el2 = String(this[j]);
+        const el1 = this[i];
+        const el2 = this[j];
 
-        if (compareFunction(el1, el2) > 0) {
+        if (compareFunction(String(el1), String(el2)) > 0) {
           [this[i], this[j]] = [this[j], this[i]];
         }
       }
